@@ -34,3 +34,112 @@
 
     All the dynamic values are written within curly braces.
 
+    In HTML app element needs to be written on which react element will be rendered.
+
+    <div id='app'></div>
+
+    CSS for person componet:
+
+    .person{
+        display: inline-block;
+        margin:10px;
+        border: 10px solid #eee
+    }
+
+5) WHy React
+
+
+UI state is difficult to manage with Vanilla JS.
+
+Allows us to focus on business logic
+
+Highly efficient
+
+huge ecosystem, active community, high performance.
+
+
+6) Single Page applications bs Multipage applications
+
+In SPA only one HTML page content is rendered on client. There are multiple components that are rendered on that single page 
+depending on logic. There is only one ReactDOM.render() call.
+
+In multipage app there are multiple HTML pages that are present on server and are present on different routes.
+In these appliaction there can be widgets added that are react components and are unaware of each others project.
+In this there can be ReactDOM.render() call per widget.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+****Next Generation JS*****
+
+1) let, const
+
+Instead of var use let and const. let for variables that can be modified and const for that cannot be modified.
+
+2) Arrow functions
+
+solve this problem
+
+const myFunc = (age, name ) => {
+    console.log("name :"+name);
+}
+
+remove parenthesis for arguments if only one argument is there.
+Remove function braces and return keyword of only return statement is there
+
+const myFunc = num => num * 2;
+
+3) Export and Import 
+
+In a file, we can export a single function or value with foll stmt:
+
+export default person
+
+when default keyword is used, then anywhere this file is imported this person will be imported. It can be referred by any name inline
+import stmt.
+
+import prs from './person.js'
+import person from './person.js'
+
+But if there are two values exported from a single file, they need to be written with an exact name as their declaration inside curly braces
+
+Ex.
+
+export const person
+
+export const data
+
+import {person, data} from './person.js'
+
+import * as base from './utility.js'  //import multiple exports from sinle file under one name
+
+as keyword for giving different name to exported variables or functions.
+
+4) Classes
+
+Classes are blueprints to objects. It has properties and methods.
+
+Ex.
+
+class Human{
+    constructor(){
+        this.gender = 'male'
+    }
+    printGender(){
+        console.log(this.gender);
+    }
+}
+class Person extends Human{
+    constructor(){
+        super();
+        this.name = 'Kriti'
+        this.gender = 'female'
+    }
+    printName(){
+        console.log(this.name);
+        console.log(this.gender);
+    }
+}
+
+const person = new Person();
+person.printName(); 
+
