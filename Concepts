@@ -1,0 +1,36 @@
+1) React is a JS library for building UI.
+
+2) UI in react contains multiple reusable components. They are custom HTML code written in JS that is converted to HTML by react.
+
+3) React is written in JS so it is fast as JS runs on browser itself.
+
+4) Steps to create a react project:
+
+    a) All the code gets rendered using ReactDOM. ReactDOM converts react code written in JSX to HTML DOM.
+
+    ReactDOM.render(app, document.querySelector('#app'));
+
+    Here in render function, first argument is the root component that needs to be rendered on HTML component.
+    Second argument is the HTML component on which React component will be rendered.
+
+    var app = (
+        <div>
+        <Person name='Kriti' age='26'></Person>
+        <Person name='Manu' age='27'></Person>
+        </div>
+    )
+
+    function Person(props){
+        return (
+            <div className='person'>
+            <h1>{props.name}</h1>
+            <p>Your age: {props.age}</p>
+            </div>
+        )
+    }
+
+    In react components, they must start from capital letter. In basic terms they are function with props as an argument that is passed
+    to them. It must contain a return value that is the JSX that needs to returned.
+
+    All the dynamic values are written within curly braces.
+
